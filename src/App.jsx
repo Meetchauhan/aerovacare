@@ -61,7 +61,7 @@ export default function App() {
       >
         <div className="flex-1 flex flex-col items-center md:items-start justify-center z-10 py-16">
           <h1 className="text-5xl md:text-6xl font-extrabold text-white drop-shadow-lg tracking-tight">
-            Aerovacare Consultancy
+            Aerovacare 
           </h1>
           <h2 className="mt-4 text-2xl md:text-3xl text-blue-100 font-medium drop-shadow">
             Guiding Your Success, Empowering Your Growth
@@ -77,7 +77,7 @@ export default function App() {
           <div className="relative w-80 h-80 md:w-96 md:h-96">
             <img
               src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&w=600&q=80"
-              alt="Consultancy Team"
+              alt="Team"
               className="rounded-3xl shadow-2xl w-full h-full object-cover border-4 border-white"
             />
             <img
@@ -100,13 +100,13 @@ export default function App() {
   <section id="about" className="py-20 bg-white px-6 lg:px-20 grid md:grid-cols-2 gap-12 items-center">
         <img
           src="https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&w=800&q=80"
-          alt="Consultancy"
+          alt=""
           className="rounded-xl shadow-2xl border-4 border-blue-100"
         />
         <div>
           <h2 className="text-3xl font-bold text-blue-800">About Aerovacare</h2>
           <p className="mt-4 text-gray-700 text-lg">
-            Aerovacare is a leading consultancy firm dedicated to empowering businesses and individuals. Our team of seasoned experts brings years of experience in strategy, operations, and leadership development. We believe in building lasting partnerships and delivering actionable solutions tailored to your unique needs.
+            Aerovacare is a leading firm dedicated to empowering businesses and individuals. Our team of seasoned experts brings years of experience in strategy, operations, and leadership development. We believe in building lasting partnerships and delivering actionable solutions tailored to your unique needs.
           </p>
           <div className="mt-6 bg-blue-50 rounded-lg p-4">
             <h3 className="text-xl font-semibold text-blue-700">Our Mission</h3>
@@ -155,7 +155,7 @@ export default function App() {
   {/* Services Section */}
   <section id="services" className="bg-gray-50 py-20 px-6 lg:px-20">
         <h2 className="text-3xl font-semibold text-center text-blue-800">
-          Our Consultancy Services
+          Our Services
         </h2>
         <div className="mt-10 grid md:grid-cols-3 gap-8">
           {[
@@ -375,7 +375,7 @@ export default function App() {
 
       {/* Footer */}
       <footer className="bg-blue-900 text-white py-6 text-center">
-        <p>© {new Date().getFullYear()} Aerovacare Consultancy. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Aerovacare . All rights reserved.</p>
       </footer>
     </div>
   );
