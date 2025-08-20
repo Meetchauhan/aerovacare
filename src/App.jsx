@@ -1,5 +1,6 @@
 
 import React, { useState } from "react";
+import mayaProfile from "./images/maya_profile.jpeg";
 
 export default function App() {
   const [navOpen, setNavOpen] = useState(false);
@@ -156,7 +157,7 @@ export default function App() {
         <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Maya Chitor */}
           <div className="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center">
-            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Maya Chitor" className="w-32 h-32 rounded-full border-4 border-blue-200 shadow-lg mb-4 object-cover" />
+            <img src={mayaProfile} alt="Maya Chitor" className="w-32 h-32 rounded-full border-4 border-blue-200 shadow-lg mb-4 object-cover" />
             <h3 className="text-2xl font-bold text-blue-900">Maya Chitor</h3>
             <p className="text-blue-700 font-medium mb-2">maya.chitor@gmail.com</p>
             <p className="text-gray-700 text-base mt-2 text-justify">
