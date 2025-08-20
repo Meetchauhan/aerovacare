@@ -219,7 +219,7 @@ export default function App() {
             <h3 className="text-xl font-bold text-blue-800 mb-4">Contact Details</h3>
             <p className="mb-2 text-gray-700"><span className="font-semibold">Email:</span> info@aerovacare.com</p>
             <p className="mb-2 text-gray-700"><span className="font-semibold">Phone:</span> +91 98765 43210</p>
-            <p className="mb-2 text-gray-700"><span className="font-semibold">Address:</span> 123, Medical Avenue, Mumbai, India</p>
+            <p className="mb-2 text-gray-700"><span className="font-semibold">Address:</span> 38803 Altura Street, Fremont CA 94536</p>
             <div className="mt-6">
               <h4 className="font-semibold text-blue-700 mb-2">Follow Us</h4>
               <div className="flex gap-4">
