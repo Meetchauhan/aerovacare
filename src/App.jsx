@@ -10,18 +10,17 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16 items-center">
             <div className="flex items-center">
-              <a href="#" className="flex items-center gap-2">
-                <img src="https://cdn.worldvectorlogo.com/logos/aerovacare.svg" alt="aerovacare Logo" className="h-8 w-8 object-contain" onError={e => {e.target.onerror=null;e.target.src='https://cdn-icons-png.flaticon.com/512/3135/3135715.png';}} />
+              <a href="#home" className="flex items-center gap-2">
+                <img src="https://cdn-icons-png.flaticon.com/512/3774/3774299.png" alt="Aerovacare Logo" className="h-8 w-8 object-contain" />
                 <span className="font-bold text-xl text-blue-800">Aerovacare</span>
               </a>
             </div>
             <div className="hidden md:flex space-x-8">
-              <a href="#" className="text-blue-800 hover:text-blue-600 font-medium transition">Home</a>
-              <a href="#about" className="text-blue-800 hover:text-blue-600 font-medium transition">About</a>
-              <a href="#services" className="text-blue-800 hover:text-blue-600 font-medium transition">Services</a>
-              {/* <a href="#partners" className="text-blue-800 hover:text-blue-600 font-medium transition">Partners</a> */}
-              <a href="#testimonials" className="text-blue-800 hover:text-blue-600 font-medium transition">Testimonials</a>
-              <a href="#contact" className="text-blue-800 hover:text-blue-600 font-medium transition">Contact</a>
+              <a href="#home" className="text-blue-800 hover:text-blue-600 font-medium transition">Home</a>
+              <a href="#about" className="text-blue-800 hover:text-blue-600 font-medium transition">About Us</a>
+              <a href="#about-tb" className="text-blue-800 hover:text-blue-600 font-medium transition">About TB</a>
+              <a href="#redcross" className="text-blue-800 hover:text-blue-600 font-medium transition">Redcross Partnership</a>
+              <a href="#contact" className="text-blue-800 hover:text-blue-600 font-medium transition">Contact Us</a>
             </div>
             <div className="md:hidden flex items-center">
               <button
@@ -44,293 +43,153 @@ export default function App() {
         {navOpen && (
           <div className="md:hidden bg-white shadow-lg border-t border-gray-100">
             <div className="flex flex-col px-4 py-4 space-y-2">
-              <a href="#" className="text-blue-800 hover:text-blue-600 font-medium transition" onClick={()=>setNavOpen(false)}>Home</a>
-              <a href="#about" className="text-blue-800 hover:text-blue-600 font-medium transition" onClick={()=>setNavOpen(false)}>About</a>
-              <a href="#services" className="text-blue-800 hover:text-blue-600 font-medium transition" onClick={()=>setNavOpen(false)}>Services</a>
-              {/* <a href="#partners" className="text-blue-800 hover:text-blue-600 font-medium transition" onClick={()=>setNavOpen(false)}>Partners</a> */}
-              <a href="#testimonials" className="text-blue-800 hover:text-blue-600 font-medium transition" onClick={()=>setNavOpen(false)}>Testimonials</a>
-              <a href="#contact" className="text-blue-800 hover:text-blue-600 font-medium transition" onClick={()=>setNavOpen(false)}>Contact</a>
+              <a href="#home" className="text-blue-800 hover:text-blue-600 font-medium transition" onClick={()=>setNavOpen(false)}>Home</a>
+              <a href="#about" className="text-blue-800 hover:text-blue-600 font-medium transition" onClick={()=>setNavOpen(false)}>About Us</a>
+              <a href="#about-tb" className="text-blue-800 hover:text-blue-600 font-medium transition" onClick={()=>setNavOpen(false)}>About TB</a>
+              <a href="#redcross" className="text-blue-800 hover:text-blue-600 font-medium transition" onClick={()=>setNavOpen(false)}>Redcross Partnership</a>
+              <a href="#contact" className="text-blue-800 hover:text-blue-600 font-medium transition" onClick={()=>setNavOpen(false)}>Contact Us</a>
             </div>
           </div>
         )}
       </nav>
       <div className="h-16" />
-      {/* Hero Section */}
-  <section
-        className="min-h-screen flex flex-col md:flex-row items-center justify-center text-center md:text-left px-4 relative bg-gradient-to-br from-blue-900 via-blue-700 to-blue-400"
-      >
+      {/* Home Section */}
+      <section id="home" className="min-h-screen flex flex-col md:flex-row items-center justify-center text-center md:text-left px-4 relative bg-gradient-to-br from-blue-900 via-blue-700 to-blue-400">
         <div className="flex-1 flex flex-col items-center md:items-start justify-center z-10 py-16">
           <h1 className="text-5xl md:text-6xl font-extrabold text-white drop-shadow-lg tracking-tight">
-            Aerovacare 
+            Aerovacare Medical 
           </h1>
           <h2 className="mt-4 text-2xl md:text-3xl text-blue-100 font-medium drop-shadow">
-            Guiding Your Success, Empowering Your Growth
+            Advancing TB Care, Empowering Healthier Communities
           </h2>
           <p className="mt-6 text-lg md:text-xl text-blue-50 bg-blue-900 bg-opacity-60 p-4 rounded-lg shadow-lg max-w-xl">
-            Unlock your business potential with expert advice, strategic planning, and hands-on support. We help you navigate challenges, seize opportunities, and achieve sustainable growth.
+            Aerovacare is dedicated to providing expert medical , specializing in tuberculosis (TB) management, prevention, and treatment strategies. We partner with organizations and communities to deliver innovative, evidence-based solutions for a TB-free world.
           </p>
           <a href="#contact" className="mt-8 inline-block bg-white text-blue-700 px-8 py-4 rounded-lg text-lg font-semibold shadow-lg hover:bg-blue-600 hover:text-white transition">
-            Book a Free Consultation
+            Contact Us
           </a>
         </div>
         <div className="flex-1 flex justify-center items-center relative py-12">
           <div className="relative w-80 h-80 md:w-96 md:h-96">
             <img
-              src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&w=600&q=80"
-              alt="Team"
-              className="rounded-3xl shadow-2xl w-full h-full object-cover border-4 border-white"
+              src="https://www.tballiance.org/wp-content/uploads/2025/01/Transforming_01_NOBG.png"
+              alt="Medical  Team"
+              className="rounded-3xl shadow-2xl w-full h-full object-cover border-4 border-white bg-white"
             />
             <img
-              src="https://images.pexels.com/photos/1181696/pexels-photo-1181696.jpeg?auto=compress&w=400&q=80"
-              alt="Business Meeting"
+              src="https://www.tballiance.org/wp-content/uploads/2025/01/Delivering-Treatments_03_NOBG.png"
+              alt="TB Awareness"
               className="absolute -bottom-8 -right-8 w-32 h-32 rounded-xl border-4 border-white shadow-xl object-cover bg-white"
               style={{zIndex:2}}
             />
             <img
-              src="https://images.pexels.com/photos/3184405/pexels-photo-3184405.jpeg?auto=compress&w=400&q=80"
-              alt="Strategy Discussion"
+              src="https://www.tballiance.org/wp-content/uploads/2025/01/Charting-the-Course_01-NOBG-1.png"
+              alt="Healthcare Collaboration"
               className="absolute -top-8 -left-8 w-24 h-24 rounded-full border-4 border-white shadow-xl object-cover bg-white"
               style={{zIndex:2}}
             />
           </div>
         </div>
       </section>
-
-  {/* About Section */}
-  <section id="about" className="py-20 bg-white px-6 lg:px-20 grid md:grid-cols-2 gap-12 items-center">
+      {/* About Us Section */}
+      <section id="about" className="py-20 bg-white px-6 lg:px-20 grid md:grid-cols-2 gap-12 items-center">
         <img
-          src="https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&w=800&q=80"
-          alt=""
-          className="rounded-xl shadow-2xl border-4 border-blue-100"
+          src="https://www.tballiance.org/wp-content/uploads/2025/01/100K-85_graphic-01.png"
+          alt="About Aerovacare"
+          className="rounded-xl shadow-2xl border-4 border-blue-100 bg-white"
         />
         <div>
-          <h2 className="text-3xl font-bold text-blue-800">About Aerovacare</h2>
+          <h2 className="text-3xl font-bold text-blue-800">About Us</h2>
           <p className="mt-4 text-gray-700 text-lg">
-            Aerovacare is a leading firm dedicated to empowering businesses and individuals. Our team of seasoned experts brings years of experience in strategy, operations, and leadership development. We believe in building lasting partnerships and delivering actionable solutions tailored to your unique needs.
+            Aerovacare is a medical  organization focused on combating tuberculosis (TB) and other infectious diseases. Our multidisciplinary team collaborates with healthcare providers, NGOs, and governments to implement best practices in TB diagnosis, treatment, and prevention.
           </p>
           <div className="mt-6 bg-blue-50 rounded-lg p-4">
             <h3 className="text-xl font-semibold text-blue-700">Our Mission</h3>
             <p className="mt-2 text-gray-700">
-              To inspire growth, drive innovation, and create sustainable value for our clients through expert guidance and unwavering support.
+              To advance global health by delivering innovative TB solutions, supporting research, and empowering communities for a TB-free future.
             </p>
           </div>
         </div>
       </section>
-
-      {/* Why Choose Us Section */}
-      <section className="py-16 bg-blue-50 px-6 lg:px-20">
-        <h2 className="text-3xl font-semibold text-center text-blue-800">Why Choose Aerovacare?</h2>
-        <div className="mt-10 grid md:grid-cols-4 gap-8 text-center">
-          {[
-            {
-              icon: "https://cdn-icons-png.flaticon.com/512/190/190411.png",
-              title: "Proven Expertise",
-              desc: "Decades of combined experience across industries."
-            },
-            {
-              icon: "https://cdn-icons-png.flaticon.com/512/1828/1828884.png",
-              title: "Client-Centric Approach",
-              desc: "Personalized solutions for every client."
-            },
-            {
-              icon: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
-              title: "Innovative Solutions",
-              desc: "Cutting-edge strategies for modern challenges."
-            },
-            {
-              icon: "https://cdn-icons-png.flaticon.com/512/1828/1828970.png",
-              title: "Trusted Results",
-              desc: "A track record of measurable success."
-            },
-          ].map((item, idx) => (
-            <div key={idx} className="bg-white rounded-xl p-6 shadow hover:shadow-lg transition flex flex-col items-center">
-              <img src={item.icon} alt={item.title} className="w-16 h-16 mb-4" />
-              <h3 className="text-xl font-bold text-blue-800">{item.title}</h3>
-              <p className="mt-2 text-gray-600">{item.desc}</p>
-            </div>
-          ))}
+      {/* About TB Section */}
+      <section id="about-tb" className="py-20 bg-blue-50 px-6 lg:px-20 grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 className="text-3xl font-bold text-blue-800 mb-4">About Tuberculosis (TB)</h2>
+          <p className="text-gray-700 text-lg">
+            Tuberculosis (TB) is a serious infectious disease that primarily affects the lungs but can impact other parts of the body. Despite being preventable and curable, TB remains a leading cause of death worldwide. Aerovacare is committed to raising awareness, supporting early diagnosis, and ensuring access to effective TB treatments for all.
+          </p>
+          <ul className="mt-6 list-disc list-inside text-blue-800 text-lg">
+            <li>Global pandemic: 1.3 million deaths annually</li>
+            <li>Early detection and treatment save lives</li>
+            <li>Community education and support are vital</li>
+          </ul>
+        </div>
+        <img
+          src="https://www.tballiance.org/wp-content/uploads/2025/04/ITE.png"
+          alt="About TB"
+          className="rounded-xl shadow-2xl border-4 border-blue-100 bg-white"
+        />
+      </section>
+      {/* Redcross Partnership Section */}
+      <section id="redcross" className="py-20 bg-white px-6 lg:px-20 grid md:grid-cols-2 gap-12 items-center">
+        <img
+          src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?auto=format&fit=crop&w=600&q=80"
+          alt="Medical  Team Meeting"
+          className="rounded-xl shadow-2xl border-4 border-red-200 bg-white p-4 object-cover"
+        />
+        <div>
+          <h2 className="text-3xl font-bold text-red-700 mb-4">Redcross Partnership</h2>
+          <p className="text-gray-700 text-lg">
+            Aerovacare proudly partners with the Red Cross to expand access to TB care and prevention. Together, we deliver community outreach, training for healthcare workers, and support for vulnerable populations. Our collaboration strengthens the fight against TB and improves health outcomes worldwide.
+          </p>
+          <ul className="mt-6 list-disc list-inside text-red-700 text-lg">
+            <li>Joint TB awareness campaigns</li>
+            <li>Mobile clinics and community screenings</li>
+            <li>Capacity building for local health systems</li>
+          </ul>
         </div>
       </section>
 
-  {/* Services Section */}
-  <section id="services" className="bg-gray-50 py-20 px-6 lg:px-20">
-        <h2 className="text-3xl font-semibold text-center text-blue-800">
-          Our Services
-        </h2>
-        <div className="mt-10 grid md:grid-cols-3 gap-8">
-          {[
-            {
-              title: "Business Strategy",
-              img: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&w=800&q=80",
-              desc: "Tailored strategies to position your business for long-term success and resilience.",
-            },
-            {
-              title: "Operational Consulting",
-              img: "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&w=800&q=80",
-              desc: "Optimize your processes for maximum efficiency, productivity, and profitability.",
-            },
-            {
-              title: "Leadership Coaching",
-              img: "https://images.pexels.com/photos/1181346/pexels-photo-1181346.jpeg?auto=compress&w=800&q=80",
-              desc: "Develop leadership skills to inspire, motivate, and guide high-performing teams.",
-            },
-            {
-              title: "Digital Transformation",
-              img: "https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&w=800&q=80",
-              desc: "Leverage technology to drive innovation and streamline operations.",
-            },
-            {
-              title: "Market Research",
-              img: "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&w=800&q=80",
-              desc: "In-depth analysis to identify opportunities and inform decision-making.",
-            },
-            {
-              title: "Change Management",
-              img: "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&w=800&q=80",
-              desc: "Smooth transitions and lasting adoption for organizational change initiatives.",
-            },
-          ].map((service, i) => (
-            <div
-              key={i}
-              className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition flex flex-col"
-            >
-              <img
-                src={service.img}
-                alt={service.title}
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-6 flex-1 flex flex-col">
-                <h3 className="text-xl font-semibold text-blue-800">
-                  {service.title}
-                </h3>
-                <p className="mt-2 text-gray-600 flex-1">{service.desc}</p>
-              </div>
-            </div>
-          ))}
+      {/* Profile Section */}
+      <section id="profiles" className="py-20 bg-blue-50 px-6 lg:px-20">
+        <h2 className="text-3xl font-bold text-center text-blue-800 mb-12">Meet Our Team</h2>
+        <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          {/* Maya Chitor */}
+          <div className="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center">
+            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Maya Chitor" className="w-32 h-32 rounded-full border-4 border-blue-200 shadow-lg mb-4 object-cover" />
+            <h3 className="text-2xl font-bold text-blue-900">Maya Chitor</h3>
+            <p className="text-blue-700 font-medium mb-2">maya.chitor@gmail.com</p>
+            <p className="text-gray-700 text-base mt-2 text-justify">
+              Hey everyone! My name is Maya Chitor and I’m a junior at BASIS Independent Fremont. I’m someone who is interested in research and medicine and I absolutely love making a difference in my community! For that reason, I have helped found this initiative and look forward to expanding its outreach to a larger audience throughout the nation. By doing so, I hope to grow tuberculosis awareness and educate others on related medical knowledge and relevant findings. Going forward, I will be putting in my full passion into these efforts.
+            </p>
+            <p className="text-gray-700 text-base mt-2 text-justify">
+              In the past few years, I have presented synthetic biology research (Developing Lipopeptides as a Bioactive against Drug Resistant Fungi) at the ACS and SCCUR conferences. This summer, I completed the Pre-Med summer program for high schoolers at University of Pennsylvania to gain a greater exposure to medicine. At school, I lead the BIF Science Olympiad team and Art Club. I am also an active member of Red Cross Club, Key Club, USABO, and have the sufficient knowledge that would benefit me in this initiative.
+            </p>
+            <p className="text-gray-700 text-base mt-2 text-justify">
+              I’m beyond excited to collaborate with everyone here, and also to meet new people that would help along this journey.
+            </p>
+          </div>
+          {/* Srikshita Solipuram */}
+          <div className="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center">
+            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Srikshita Solipuram" className="w-32 h-32 rounded-full border-4 border-blue-200 shadow-lg mb-4 object-cover" />
+            <h3 className="text-2xl font-bold text-blue-900">Srikshita Solipuram</h3>
+            <p className="text-blue-700 font-medium mb-2">srikshita@gmail.com</p>
+            <p className="text-gray-700 text-base mt-2 text-justify">
+              Hello! My name is Srikshita Solipuram, a high school junior who is passionate about learning, leadership, and most importantly, giving back to my community. I believe these aspects have driven me to take part in this initiative.
+            </p>
+            <p className="text-gray-700 text-base mt-2 text-justify">
+              At school, I participate in clubs such as Speech and Debate, where I have learned fundamental public speaking skills; Future Business Leaders of America (FBLA), which has taught me crucial presentation skills; and Science Fair, where I have enhanced my understanding of biological sciences. These experiences allowed me to be better equipped when communicating with my peers and teachers. Beyond academics, I volunteer with the Red Cross Youth Campaign, Trenton Soup Kitchen, and Capital Health Hospital, where I've gained insight into compassionate, communicative, and effective healthcare. These volunteer endeavours have allowed me to gain more knowledge of true aspects of leadership, becoming more community-minded, and deepened my commitment to making a meaningful impact - especially in raising awareness about tuberculosis and improving lives through advocacy and service.
+            </p>
+            <p className="text-gray-700 text-base mt-2 text-justify">
+              I am extremely grateful to take part in this enterprise, in the hope that it will expand across the nation, and I am honored to have the opportunity to cooperate with everyone.
+            </p>
+          </div>
         </div>
       </section>
-  {/* Partners Section */}
-  {/* <section id="partners" className="py-12 bg-white px-6 lg:px-20">
-        <h2 className="text-2xl font-semibold text-center text-blue-800 mb-8">Our Trusted Partners</h2>
-        <div className="flex flex-wrap justify-center items-center gap-8">
-          {[
-            "https://cdn.worldvectorlogo.com/logos/microsoft.svg",
-            "https://cdn.worldvectorlogo.com/logos/accenture-2.svg",
-            "https://cdn.worldvectorlogo.com/logos/ibm.svg",
-            "https://cdn.worldvectorlogo.com/logos/google-icon.svg",
-            "https://cdn.worldvectorlogo.com/logos/deloitte-1.svg",
-          ].map((logo, idx) => (
-            <img key={idx} src={logo} alt="Partner Logo" className="h-10 md:h-14 grayscale hover:grayscale-0 transition bg-white p-2 rounded" />
-          ))}
-        </div>
-      </section> */}
-
-  {/* Testimonials Section */}
-  <section id="testimonials" className="py-16 bg-white px-6 lg:px-20">
-        <h2 className="text-3xl font-semibold text-center text-blue-800">
-          What Our Clients Say
-        </h2>
-        <div className="mt-10 grid md:grid-cols-3 gap-8">
-          {[
-            {
-              name: "Priya Singh – CEO, Innovatech",
-              quote:
-                "Aerovacare's insights transformed our business strategy overnight.",
-            },
-            {
-              name: "Rahul Mehta – Founder, GreenLeaf",
-              quote:
-                "Operational efficiency skyrocketed within weeks of working with them.",
-            },
-            {
-              name: "Ananya Patel – Manager, SunPower",
-              quote:
-                "The leadership coaching was a game-changer for our team dynamics.",
-            },
-          ].map((t, idx) => (
-            <div
-              key={idx}
-              className="bg-gray-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition"
-            >
-              <p className="italic">“{t.quote}”</p>
-              <p className="mt-4 font-semibold text-blue-800">— {t.name}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Process Section */}
-      <section className="py-16 bg-gray-50 px-6 lg:px-20">
-        <h2 className="text-3xl font-semibold text-center text-blue-800">
-          Our Process
-        </h2>
-        <div className="mt-10 grid md:grid-cols-4 gap-8 text-center">
-          {[
-            { step: "1. Discover", desc: "Assess your challenges and goals." },
-            { step: "2. Strategize", desc: "Create a tailored roadmap." },
-            { step: "3. Execute", desc: "Hands-on guidance every step." },
-            { step: "4. Optimize", desc: "Ensure lasting impact and efficiency." },
-          ].map((item, idx) => (
-            <div
-              key={idx}
-              className="bg-white rounded-xl p-6 shadow hover:shadow-lg transition"
-            >
-              <h3 className="text-xl font-bold text-blue-800">{item.step}</h3>
-              <p className="mt-2 text-gray-600">{item.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Blog / Insights Section */}
-      <section className="py-16 bg-white px-6 lg:px-20">
-        <h2 className="text-3xl font-semibold text-center text-blue-800">
-          Insights & Resources
-        </h2>
-        <div className="mt-10 grid md:grid-cols-3 gap-8">
-          {[
-            {
-              title: "5 Steps to Strengthen Business Strategy",
-              img: "https://images.pexels.com/photos/3184301/pexels-photo-3184301.jpeg?auto=compress&w=800&q=80",
-            },
-            {
-              title: "Operational Hacks for Sustainable Growth",
-              img: "https://images.pexels.com/photos/3184398/pexels-photo-3184398.jpeg?auto=compress&w=800&q=80",
-            },
-            {
-              title: "Building Effective Leadership Teams",
-              img: "https://images.pexels.com/photos/3184419/pexels-photo-3184419.jpeg?auto=compress&w=800&q=80",
-            },
-          ].map((post, idx) => (
-            <div
-              key={idx}
-              className="bg-gray-100 rounded-xl overflow-hidden shadow hover:shadow-lg transition"
-            >
-              <img
-                src={post.img}
-                alt={post.title}
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-blue-800">
-                  {post.title}
-                </h3>
-                <a
-                  href="#"
-                  className="text-blue-600 hover:underline mt-4 inline-block"
-                >
-                  Read More →
-                </a>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Contact Section */}
+      {/* Contact Us Section */}
       <section id="contact" className="py-20 px-6 lg:px-20 bg-blue-50">
         <h2 className="text-3xl font-semibold text-center text-blue-800">
-          Get in Touch
+          Contact Us
         </h2>
         <div className="mt-8 max-w-4xl mx-auto grid md:grid-cols-2 gap-10">
           <form className="space-y-4 bg-white p-8 rounded-xl shadow-lg">
@@ -360,7 +219,7 @@ export default function App() {
             <h3 className="text-xl font-bold text-blue-800 mb-4">Contact Details</h3>
             <p className="mb-2 text-gray-700"><span className="font-semibold">Email:</span> info@aerovacare.com</p>
             <p className="mb-2 text-gray-700"><span className="font-semibold">Phone:</span> +91 98765 43210</p>
-            <p className="mb-2 text-gray-700"><span className="font-semibold">Address:</span> 123, Business Avenue, Mumbai, India</p>
+            <p className="mb-2 text-gray-700"><span className="font-semibold">Address:</span> 123, Medical Avenue, Mumbai, India</p>
             <div className="mt-6">
               <h4 className="font-semibold text-blue-700 mb-2">Follow Us</h4>
               <div className="flex gap-4">
@@ -372,10 +231,9 @@ export default function App() {
           </div>
         </div>
       </section>
-
       {/* Footer */}
       <footer className="bg-blue-900 text-white py-6 text-center">
-        <p>© {new Date().getFullYear()} Aerovacare . All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Aerovacare Medical. All rights reserved.</p>
       </footer>
     </div>
   );
