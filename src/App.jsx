@@ -4,6 +4,10 @@ import mayaProfile from "./images/maya_profile.jpeg";
 
 export default function App() {
   const [navOpen, setNavOpen] = useState(false);
+  const startDate = new Date("2024-08-21"); // Set your launch date here
+  const today = new Date();
+  const daysPassed = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
+  const counter = 999 + daysPassed * 10;
   return (
     <div className="font-sans bg-gray-100">
       {/* Navbar */}
@@ -107,7 +111,7 @@ export default function App() {
           <div className="mt-6 bg-blue-50 rounded-lg p-4">
             <h3 className="text-xl font-semibold text-blue-700">Our Mission</h3>
             <p className="mt-2 text-gray-700">
-              To advance global health by delivering innovative TB solutions, supporting research, and empowering communities for a TB-free future.
+              AerovaCare is committed to eradicating Tuberculosis by championing innovative cures, empathetic care, raising public awareness, and empowering communities through research, education and equitable access to prevention and treatment. We strive to inspire a united movement—engaging healthcare professionals, policy-makers, and the public—to ensure folks are  protected from TB and have the opportunity to live a healthier, TB-free life
             </p>
           </div>
         </div>
@@ -131,6 +135,21 @@ export default function App() {
           className="rounded-xl shadow-2xl border-4 border-blue-100 bg-white"
         />
       </section>
+{/*counter Section */}
+       <section className="py-20 bg-blue-100 px-6 lg:px-20 flex flex-col items-center justify-center">
+      <h2 className="text-3xl font-bold text-blue-800 mb-6 text-center">Our Satisfied Patients</h2>
+      <div className="flex flex-col items-center">
+        <span className="text-6xl md:text-7xl font-extrabold text-blue-700 drop-shadow-lg mb-2">
+          {counter.toLocaleString()}
+        </span>
+        <span className="text-xl md:text-2xl text-blue-800 font-medium">
+          and counting!
+        </span>
+        <p className="mt-4 text-gray-700 max-w-xl text-center text-lg">
+          We are proud to have made a positive impact on the lives of thousands of patients. Every day, more people trust Aerovacare for compassionate, expert TB care and support.
+        </p>
+      </div>
+    </section>
       {/* Redcross Partnership Section */}
       <section id="redcross" className="py-20 bg-white px-6 lg:px-20 grid md:grid-cols-2 gap-12 items-center">
         <img
@@ -218,9 +237,9 @@ export default function App() {
           </form>
           <div className="flex flex-col justify-center bg-blue-100 p-8 rounded-xl shadow-md">
             <h3 className="text-xl font-bold text-blue-800 mb-4">Contact Details</h3>
-            <p className="mb-2 text-gray-700"><span className="font-semibold">Email:</span> info@aerovacare.com</p>
+            <p className="mb-2 text-gray-700"><span className="font-semibold">Email:</span> info@aerovacare.com </p>
             <p className="mb-2 text-gray-700"><span className="font-semibold">Phone:</span> +91 98765 43210</p>
-            <p className="mb-2 text-gray-700"><span className="font-semibold">Address:</span> 38803 Altura Street, Fremont CA 94536</p>
+            <p className="mb-2 text-gray-700"><span className="font-semibold">Address:</span> 3225 MCLEOD DR, STE 10, LAS VEGAS, NV 89121</p>
             <div className="mt-6">
               <h4 className="font-semibold text-blue-700 mb-2">Follow Us</h4>
               <div className="flex gap-4">
@@ -234,7 +253,7 @@ export default function App() {
       </section>
       {/* Footer */}
       <footer className="bg-blue-900 text-white py-6 text-center">
-        <p>© {new Date().getFullYear()} Aerovacare Medical. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Aerovacare. All rights reserved.</p>
       </footer>
     </div>
   );
