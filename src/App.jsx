@@ -5,10 +5,10 @@ import srikshitaProfile from "./images/srikshita_profile.jpeg";
 
 export default function App() {
   const [navOpen, setNavOpen] = useState(false);
-  const startDate = new Date("2024-08-21"); // Set your launch date here
+  const startDate = new Date("2025-05-08"); // Set your launch date here
   const today = new Date();
   const daysPassed = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
-  const counter = 999 + daysPassed * 10;
+  const counter = 999 + daysPassed * 50;
   return (
     <div className="font-sans bg-gray-100">
       {/* Navbar */}
