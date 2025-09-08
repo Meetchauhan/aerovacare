@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import mayaProfile from "../images/maya_profile.jpeg";
 import srikshitaProfile from "../images/srikshita_profile.jpeg";
+import DonationModal from "../components/DonationModal";
 
 export default function Home() {
   const [navOpen, setNavOpen] = useState(false);
+  const [showDonationModal, setShowDonationModal] = useState(false);
   const startDate = new Date("2025-05-08"); // Set your launch date here
   const today = new Date();
   const daysPassed = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
@@ -75,9 +77,20 @@ export default function Home() {
           <p className="mt-6 text-lg md:text-xl text-blue-50 bg-blue-900 bg-opacity-60 p-4 rounded-lg shadow-lg max-w-xl">
             Aerovacare is dedicated to providing expert medical , specializing in tuberculosis (TB) management, prevention, and treatment strategies. We partner with organizations and communities to deliver innovative, evidence-based solutions for a TB-free world.
           </p>
-          <a href="#contact" className="mt-8 inline-block bg-white text-blue-700 px-8 py-4 rounded-lg text-lg font-semibold shadow-lg hover:bg-blue-600 hover:text-white transition">
-            Contact Us
-          </a>
+          <div className="mt-8 flex flex-col sm:flex-row gap-4">
+            <a href="#contact" className="inline-block bg-white text-blue-700 px-8 py-4 rounded-lg text-lg font-semibold shadow-lg hover:bg-blue-600 hover:text-white transition">
+              Contact Us
+            </a>
+            {/* <button 
+              onClick={() => setShowDonationModal(true)}
+              className="bg-green-600 text-white px-8 py-4 rounded-lg text-lg font-semibold shadow-lg hover:bg-green-700 transition flex items-center justify-center gap-2"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+              Donate Now
+            </button> */}
+          </div>
         </div>
         <div className="flex-1 flex justify-center items-center relative py-12">
           <div className="relative w-80 h-80 md:w-96 md:h-96">
@@ -247,8 +260,8 @@ export default function Home() {
           </form>
           <div className="flex flex-col justify-center bg-blue-100 p-8 rounded-xl shadow-md">
             <h3 className="text-xl font-bold text-blue-800 mb-4">Contact Details</h3>
-            <p className="mb-2 text-gray-700"><span className="font-semibold">Email:</span> info@aerovacare.com </p>
-            <p className="mb-2 text-gray-700"><span className="font-semibold">Phone:</span> +91 98765 43210</p>
+            <a href="mailto:info@aerovacare.com" className="mb-2 text-gray-700"><span className="font-semibold">Email:</span> info@aerovacare.com </a>
+            <a href="tel:9258956758" className="mb-2 text-gray-700"><span className="font-semibold">Phone:</span> +1 925 895 6758</a>
             <p className="mb-2 text-gray-700"><span className="font-semibold">Address:</span> 3225 MCLEOD DR, STE 10, LAS VEGAS, NV 89121</p>
             <div className="mt-6">
               <h4 className="font-semibold text-blue-700 mb-2">Follow Us</h4>
@@ -266,6 +279,12 @@ export default function Home() {
       <footer className="bg-blue-900 text-white py-6 text-center">
         <p>© {new Date().getFullYear()} Aerovacare. All rights reserved.</p>
       </footer>
+
+      {/* Donation Modal */}
+      <DonationModal 
+        isOpen={showDonationModal} 
+        onClose={() => setShowDonationModal(false)} 
+      />
     </div>
   );
 }

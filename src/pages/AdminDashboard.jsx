@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import ProfileManager from "../components/ProfileManager";
 import TokenValidator from "../components/TokenValidator";
 import VideoManager from "../components/VideoManager";
+import DonationManager from "../components/DonationManager";
 
 export default function AdminDashboard() {
   const { user } = useSelector((state) => state.auth);
@@ -85,6 +86,7 @@ export default function AdminDashboard() {
               { id: "overview", label: "Overview" },
               { id: "patients", label: "Patients" },
               { id: "videos", label: "Videos" },
+              { id: "donations", label: "Donations" },
               { id: "reports", label: "Reports" },
               { id: "settings", label: "Settings" }
             ].map((tab) => (
@@ -207,6 +209,13 @@ export default function AdminDashboard() {
         {activeTab === "videos" && (
           <div>
             <VideoManager />
+          </div>
+        )}
+
+        {/* Donations Tab */}
+        {activeTab === "donations" && (
+          <div>
+            <DonationManager />
           </div>
         )}
 
