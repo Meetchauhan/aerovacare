@@ -87,7 +87,8 @@ const initialState = {
   token: null,
   isAuthenticated: false,
   loading: false,
-  error: null
+  error: null,
+  isInitialized: false
 };
 
 const authSlice = createSlice({
@@ -116,6 +117,7 @@ const authSlice = createSlice({
     },
     // Initialize auth state from localStorage
     initializeAuth: (state) => {
+      state.loading = true;
       const token = getStoredToken();
       const user = getStoredUser();
       
@@ -130,6 +132,8 @@ const authSlice = createSlice({
         state.user = null;
         state.isAuthenticated = false;
       }
+      state.loading = false;
+      state.isInitialized = true;
     }
   },
   extraReducers: (builder) => {

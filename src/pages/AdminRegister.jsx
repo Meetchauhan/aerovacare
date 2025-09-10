@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { registerAsync } from "../store/authSlice";
+import { isAuthenticated as checkLocalStorageAuth } from "../utils/authUtils";
 
 export default function AdminRegister() {
   const [formData, setFormData] = useState({
@@ -17,6 +18,14 @@ export default function AdminRegister() {
   
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const { isAuthenticated, isInitialized } = useSelector((state) => state.auth);
+
+  // Redirect if already authenticated
+  useEffect(() => {
+    if (isInitialized && isAuthenticated && checkLocalStorageAuth()) {
+      navigate("/admin/dashboard", { replace: true });
+    }
+  }, [isAuthenticated, isInitialized, navigate]);
 
   const handleChange = (e) => {
     setFormData({

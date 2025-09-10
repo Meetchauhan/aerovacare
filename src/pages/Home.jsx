@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import mayaProfile from "../images/maya_profile.jpeg";
 import srikshitaProfile from "../images/srikshita_profile.jpeg";
 import DonationModal from "../components/DonationModal";
+import VideoSection from "../components/VideoSection";
 
 export default function Home() {
   const [navOpen, setNavOpen] = useState(false);
@@ -28,6 +29,7 @@ export default function Home() {
               <a href="#home" className="text-blue-800 hover:text-blue-600 font-medium transition">Home</a>
               <a href="#about" className="text-blue-800 hover:text-blue-600 font-medium transition">About Us</a>
               <a href="#about-tb" className="text-blue-800 hover:text-blue-600 font-medium transition">About TB</a>
+              <a href="#videos" className="text-blue-800 hover:text-blue-600 font-medium transition">Videos</a>
               <a href="#redcross" className="text-blue-800 hover:text-blue-600 font-medium transition">Redcross Partnership</a>
               <a href="#contact" className="text-blue-800 hover:text-blue-600 font-medium transition">Contact Us</a>
               <Link to="/admin/login" className="text-blue-800 hover:text-blue-600 font-medium transition">Admin</Link>
@@ -56,6 +58,7 @@ export default function Home() {
               <a href="#home" className="text-blue-800 hover:text-blue-600 font-medium transition" onClick={()=>setNavOpen(false)}>Home</a>
               <a href="#about" className="text-blue-800 hover:text-blue-600 font-medium transition" onClick={()=>setNavOpen(false)}>About Us</a>
               <a href="#about-tb" className="text-blue-800 hover:text-blue-600 font-medium transition" onClick={()=>setNavOpen(false)}>About TB</a>
+              <a href="#videos" className="text-blue-800 hover:text-blue-600 font-medium transition" onClick={()=>setNavOpen(false)}>Videos</a>
               <a href="#redcross" className="text-blue-800 hover:text-blue-600 font-medium transition" onClick={()=>setNavOpen(false)}>Redcross Partnership</a>
               <a href="#contact" className="text-blue-800 hover:text-blue-600 font-medium transition" onClick={()=>setNavOpen(false)}>Contact Us</a>
               <Link to="/admin/login" className="text-blue-800 hover:text-blue-600 font-medium transition" onClick={()=>setNavOpen(false)}>Admin</Link>
@@ -228,6 +231,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Video Section */}
+      {/* <VideoSection /> */}
 
       {/* Contact Us Section */}
       <section id="contact" className="py-20 px-6 lg:px-20 bg-blue-50">

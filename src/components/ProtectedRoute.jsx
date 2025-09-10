@@ -4,10 +4,11 @@ import { Navigate, useLocation } from 'react-router-dom';
 import { isAuthenticated as checkLocalStorageAuth } from '../utils/authUtils';
 
 const ProtectedRoute = ({ children }) => {
-  const { isAuthenticated, loading } = useSelector((state) => state.auth);
+  const { isAuthenticated, loading, isInitialized } = useSelector((state) => state.auth);
   const location = useLocation();
 
-  if (loading) {
+  // Show loading spinner while auth is being initialized or while loading
+  if (loading || !isInitialized) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
