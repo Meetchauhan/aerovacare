@@ -84,7 +84,7 @@ export default function Home() {
             <a href="#contact" className="inline-block bg-white text-blue-700 px-8 py-4 rounded-lg text-lg font-semibold shadow-lg hover:bg-blue-600 hover:text-white transition">
               Contact Us
             </a>
-            {/* <button 
+            <button 
               onClick={() => setShowDonationModal(true)}
               className="bg-green-600 text-white px-8 py-4 rounded-lg text-lg font-semibold shadow-lg hover:bg-green-700 transition flex items-center justify-center gap-2"
             >
@@ -92,7 +92,7 @@ export default function Home() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
               </svg>
               Donate Now
-            </button> */}
+            </button>
           </div>
         </div>
         <div className="flex-1 flex justify-center items-center relative py-12">
