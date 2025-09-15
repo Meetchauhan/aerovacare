@@ -82,10 +82,10 @@ export const paymentApi = {
 // Donation types configuration
 export const DONATION_TYPES = {
   GENERAL: 'general',
-  EMERGENCY: 'emergency',
-  MEDICAL: 'medical',
-  EDUCATION: 'education',
-  INFRASTRUCTURE: 'infrastructure'
+  // EMERGENCY: 'emergency',
+  // MEDICAL: 'medical',
+  // EDUCATION: 'education',
+  // INFRASTRUCTURE: 'infrastructure'
 };
 
 // Supported currencies
